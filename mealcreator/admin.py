@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from mealcreator.models import Meal, Dish
+
+admin.site.register(Meal)
+admin.site.register(Dish)

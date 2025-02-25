@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+  </head>
+  <body>
+<ul>
+    {% for meal in meals %}
+        <li>{{ meal.get_type_display }} - {{ meal.meal_date }} - {{ meal.meal_ingredient }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
