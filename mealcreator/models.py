@@ -15,9 +15,10 @@ class Meal(models.Model):
     }
     type = models.CharField(max_length=2, choices=MEAL_TYPE_CHOICES.items(), default=LUNCH, null=False, blank=False)
     meal_date = models.DateField()
-    meal_ingredient = models.ForeignKey(Dish, on_delete=models.CASCADE)
+    meal_dish_lunch = models.ForeignKey('Dish', related_name="meal_dish_lunch", on_delete=models.CASCADE)
+    meal_dish_dinner = models.ForeignKey('Dish', related_name="meal_dish_dinner", on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.type + " " + self.meal_ingredient.ingredient_name
+        return self.type + " " + self.meal_dish_lunch.ingredient_name
 
 

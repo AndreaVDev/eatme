@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <title>Meal</title>
+    {% load static %}
+    <link
+            rel="stylesheet"
+            href="{% static 'mealcreator/css/main.css' %}"
+            type="text/css"
+    />
+</head>
+<body>
+{% block content %}{% endblock content %}
+</body>
+</html>
